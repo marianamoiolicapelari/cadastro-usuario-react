@@ -31,14 +31,6 @@ function App() {
     })
 
       console.log(data)
-    // setUsers([
-    //   ...users,
-    //   {
-    //     id: Math.random(),
-    //     name: inputName.current.value,
-    //     age: inputAge.current.value,
-    //   },
-    // ])
   }
 
   function deleteUser(userId) {
