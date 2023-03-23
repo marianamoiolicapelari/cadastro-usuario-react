@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import Background from '../../assets/background1.svg'
+
+import Background from '../../assets/background1.svg';
 
 export const Container = styled.div`
-   height: max-content;
+   height: 100%;
+   min-height: 100vh;
    background: url('${Background}');
    background-size: cover;
    display: flex;
@@ -24,16 +26,6 @@ export const ContainerItens = styled.div`
    padding: 50px 36px;
    display: flex;
    flex-direction: column;
-`
-export const H1 = styled.h1`
-   font-style: normal;
-   font-weight: 700;
-   font-size: 34px;
-   line-height: 40px;
-   text-align: center;
-   color: #FFFFFF;
-   margin-bottom: 80px;
-    
 `
 export const InputLabel = styled.p`
    letter-spacing: -0.408px;

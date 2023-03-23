@@ -1,8 +1,10 @@
 import styled from "styled-components";
+
 import Background from '../../assets/background.svg'
 
 export const Container = styled.div`
-   height: max-content;
+   height: 100%;
+   min-height: 100vh;
    background: url('${Background}');
    background-size: cover;
    display: flex;
@@ -14,7 +16,8 @@ export const Image = styled.img`
    margin-top: 30px;
 `
 export const ContainerItens = styled.div`
-   height: 100vh;
+   height: 100%;
+   min-height: calc(100vh - 170px);
    background: linear-gradient(
       157.44deg, 
       rgba(255, 255, 255, 0.6) 0.84%,
@@ -26,16 +29,7 @@ export const ContainerItens = styled.div`
    display: flex;
    flex-direction: column;
 `
-export const H1 = styled.h1`
-   font-style: normal;
-   font-weight: 700;
-   font-size: 34px;
-   line-height: 40px;
-   text-align: center;
-   color: #FFFFFF;
-   margin-bottom: 80px;
-    
-`
+
 export const Button = styled.button`
    width: 342px;
    height: 74px;
