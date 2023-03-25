@@ -6,14 +6,14 @@ import People from '../../assets/people.svg'
 import Arrow from '../../assets/arrow.svg'
 
 import H1 from '../../components/Title';
-import ContainerItens from '../../components/ContainerItens'
+import ContainerItens from '../../components/ContainerItens';
+import Button from '../../components/Button';
 
 import {
   Container,
   Image,
   InputLabel,
   Input,
-  Button,
 
 } from './styles'
 
@@ -24,17 +24,19 @@ const App = () => {
   const inputAge = useRef()
 
   async function addNewUser() {
-
-    const { data: newUser } = await axios.post("http://localhost:3000/users", {
+    
+    const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value,
       age: inputAge.current.value,
+     
     })
-
+   
     setUsers([...users, newUser])
 
     history.push('/usuarios')
+   
   }
-
+  
   return (
     <Container>
       <Image alt='logo-imagem' src={People} />

@@ -9,10 +9,10 @@ import Trash from '../../assets/trash.svg'
 
 import H1 from '../../components/Title';
 import ContainerItens from '../../components/ContainerItens';
+import Button from '../../components/Button'
 import {
   Container,
   Image,
-  Button,
   User
 } from './styles'
 
@@ -20,11 +20,11 @@ const Users = () => {
   const [users, setUsers] = useState([])
   const history = useHistory()
 
- 
+
   useEffect(() => {
 
     async function fetchUsers() {
-      const { data: newUsers } = await axios.get("http://localhost:3000/users")
+      const { data: newUsers } = await axios.get("http://localhost:3001/users")
 
       setUsers(newUsers)
     }
@@ -33,7 +33,8 @@ const Users = () => {
   }, [])
 
 
-  function deleteUser(userId) {
+  async function deleteUser(userId) {
+    await axios.delete(`http://localhost:3001/users/${userId}`)
     const newUsers = users.filter((user) => user.id !== userId)
     setUsers(newUsers)
   }
@@ -61,7 +62,7 @@ const Users = () => {
           }
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button onClick={goBackPage} buttonUsers={true}>
           <img alt='seta' src={Arrow} />Voltar
         </Button>
 
