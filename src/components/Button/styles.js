@@ -18,14 +18,6 @@ export const Button = styled.button`
    gap: 20px;
    margin-top: 130px;
 
-   /* &:hover {
-      opacity: 0.8;
-   }
-
-   &:active {
-      opacity: 0.5;
-   } */
-
    ${ props => props.buttonUsers && `
         background-color: transparent;
         border: 1px solid #FFF;

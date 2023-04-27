@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useRef } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 import People from '../../assets/people.svg'
 import Arrow from '../../assets/arrow.svg'
 
-import H1 from '../../components/Title';
-import ContainerItens from '../../components/ContainerItens';
-import Button from '../../components/Button';
+import H1 from '../../components/Title'
+import ContainerItems from '../../components/ContainerItems'
+import Button from '../../components/Button'
 
 import {
   Container,
@@ -24,6 +24,7 @@ const App = () => {
   const inputAge = useRef()
 
   async function addNewUser() {
+    console.log('Clicou')
     
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value,
@@ -40,7 +41,7 @@ const App = () => {
   return (
     <Container>
       <Image alt='logo-imagem' src={People} />
-      <ContainerItens>
+      <ContainerItems>
         <H1>Olá!</H1>
 
         <InputLabel>Nome</InputLabel>
@@ -52,8 +53,8 @@ const App = () => {
         <Button onClick={addNewUser}>
           Cadastrar<img alt='seta' src={Arrow} />
         </Button>
-
-      </ContainerItens>
+        
+      </ContainerItems>
     </Container>
   )
 }
