@@ -24,8 +24,7 @@ const App = () => {
   const inputAge = useRef()
 
   async function addNewUser() {
-    console.log('Clicou')
-    
+        
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value,
       age: inputAge.current.value,
