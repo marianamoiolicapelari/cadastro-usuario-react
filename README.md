@@ -2,7 +2,7 @@
 
 ## 💻 Sobre o Projeto
 
-Desenvolvido em React.js
+Projeto de cadastro de usuários desenvolvido em React.js
 
 ## 🎨 Layout
 
